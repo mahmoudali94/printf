@@ -28,7 +28,6 @@ int handler(const char *str, va_list list)
 		size = size + 1;
 	}
 
-
 	return (size);
 }
 
@@ -59,7 +58,6 @@ int percent_handler(const char *str, va_list list, int *i)
 	};
 
 	*i = *i + 1;
-
 	if (str[*i] == '\0')
 		return (-1);
 
@@ -68,7 +66,6 @@ int percent_handler(const char *str, va_list list, int *i)
 		_putchar('%');
 		return (1);
 	}
-
 	number_formats = sizeof(formats) / sizeof(formats[0]);
 	for (size = j = 0; j < number_formats; j++)
 	{
@@ -79,9 +76,7 @@ int percent_handler(const char *str, va_list list, int *i)
 		}
 
 	}
-
 	_putchar('%');
 	_putchar(str[*i]);
-
 	return (2);
 }
